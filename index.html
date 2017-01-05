@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Animation Library</title>
+    <style>
+        .dumb-element-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <link  rel="stylesheet" href="dist/animation.css">
+</head>
+<body>
+    <div class="dumb-element-container">
+        <h1 id="dumb-element">CSS3</h1>
+    </div>
+
+    <div class="action-container">
+        <button onclick="applyAnimation('roll')">ROLL</button>
+        <button onclick="applyAnimation('slide')">SLIDE</button>
+    </div>
+    <script>
+        function  applyAnimation(animationClass) {
+            var element = document.getElementById("dumb-element");
+            element.className = "";
+            element.className = "i-animation "+ animationClass;
+        }
+    </script>
+</body>
+</html>
